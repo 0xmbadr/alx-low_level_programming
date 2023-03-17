@@ -4,7 +4,7 @@
  * main - Entry Point.
  * DESC - A C program that prints the size of various types suign sizeof.
  * Return: 0
- * */
+*/
 int main(void)
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
