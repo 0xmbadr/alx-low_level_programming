@@ -4,7 +4,7 @@
 /**
  * main - Entry Point.
  * DESC - prints a quote using write.
- * Return - 1 (error)
+ * Return: 1 (error)
  */
 int main(void)
 {
