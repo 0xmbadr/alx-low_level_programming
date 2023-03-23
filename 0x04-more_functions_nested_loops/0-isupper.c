@@ -6,7 +6,7 @@
  * Return: 1 if true, 0 if not
  */
 
-int _isupper(char c)
+int _isupper(int c)
 {
     /* checks if c is in range of ascii uppercase*/
 	if (c >= 'A' && c <= 'Z')
