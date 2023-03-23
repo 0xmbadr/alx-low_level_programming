@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - prints numbers [1-100], except for  
- * mutiples of 3 prints Fizz 
+ * main - prints numbers [1-100], except for
+ * mutiples of 3 prints Fizz
  * and multiples of 5 prints Buzz
  *
  * Return: 0 (Success)
