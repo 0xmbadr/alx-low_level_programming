@@ -15,5 +15,9 @@
 
 - Write a function that returns the length of a string.
 
+**3. I do not fear computers. I fear the lack of them**
+
+- Write a function that prints a string, followed by a new line, to `stdout`.
+
 
 
