@@ -19,5 +19,11 @@
 
 - Write a function that prints a string, followed by a new line, to `stdout`.
 
+**4. I can only go one way. I've not got a reverse gear**
+
+- Write a function that prints a string, in reverse, followed by a new line.
+
+
+
 
 
