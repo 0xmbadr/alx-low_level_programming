@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*  _strncpy - A func that works exactly like  
+*  _strncpy - A func that works exactly like 
 * the standard library `strncpy`.
 *
 * @dest: dest string.
