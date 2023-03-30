@@ -4,7 +4,7 @@
  *
  * @s1: String #1.
  * @s2: String #2.
- * 
+ *
  * Return: 0 if equals, else if not
  *
  */
