@@ -4,6 +4,8 @@
 * string_toupper - lowercase to uppercase
 *
 * @str: Input String.
+*
+* Return: str
 */
 
 char *string_toupper(char *str)
