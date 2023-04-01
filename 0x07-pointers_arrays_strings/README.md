@@ -2,7 +2,7 @@
 
 <h3>Notes</h3>
 
-> A **pointer to a pointer** or **double Pointer** is a pointer that holds the address of another pointer
+> A **pointer to a pointer** or **A Double Pointer** is a pointer that holds the address of another pointer.
 
 - It's a form of multiple indirection, or a chain of pointers.
 
@@ -58,15 +58,23 @@ Possible Output:
 variable = 3000
 value of variable using p1 = 3000
 value of variable using p2 = 3000
+
 Addres of variable = 0x7ffc331969b4
 Address of variable using p1 = 0x7ffc331969b4
 Address of variable using p2 = 0x7ffc331969b4
+
 Value of Pointer p1 = 0x7ffc331969b4
 Value of Pointer p1 using p2 = 0x7ffc331969b4
+
 Addres of Pointer p1 = 0x7ffc331969b8
 Address of Pointer p1 using p2 = 0x7ffc331969b8
+
 Value of Pointer p2 = 0x7ffc331969b8
 Address of Pointer p2 = 0x7ffc331969c0
 ```
 To put it simply: 
-![](./images/accessing-pointer-to-pointer.png)
+```
+variable == *p1 == **p2
+&variable == p1 == *p2
+             &p1 == p2
+```
