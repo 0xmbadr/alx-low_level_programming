@@ -173,9 +173,35 @@ printf("y[0] = %p\n", y[0]); // address of first element of first row
 printf("y[1] = %p\n", y[1]); // address of first element of second row
 ```
 
+## Quiz 
+
+1. Size of Pointers vs Size of `int`
+    ```c
+    int *p;
+    printf("%lu", sizeof(p)); // 8 byte
+    printf("\n%lu", sizeof(*p)); //4 byte 
+    ```
+
+
+
 ## Tasks
 
 ### 0. memset
 
 Write a function that fills memory with a constant byte. (similar to `memset` from the standad library).
 
+```c
+char* _memset(char *s, char b, unsigned int n)
+{
+    /* declar a non-ngative integer */
+	unsigned int i;
+    /* Loop over until n reached */
+	for (i = 0; i < n; i++)
+	{
+        /* replace n bytes with b */
+		s[i] = b;
+	}
+
+	return s;
+}
+```
