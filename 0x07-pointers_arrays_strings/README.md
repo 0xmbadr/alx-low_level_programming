@@ -1,6 +1,15 @@
 <h1 align="center">0x07. C - Even more pointers, arrays and strings</h1>
 
-<h3>Notes</h3>
+Table Of Contents
+- [Notes](#notes)
+    - [Double Pointers](#double-pointers)
+    - [2D Arrays In C](#2d-arrays)
+
+
+### Notes
+
+
+#### Double Pointers 
 
 > A **pointer to a pointer** or **A Double Pointer** is a pointer that holds the address of another pointer.
 
@@ -78,3 +87,87 @@ variable == *p1 == **p2
 &variable == p1 == *p2
              &p1 == p2
 ```
+
+
+
+#### 2D Arrays
+
+> A **2D Array** (aka **Matrix**) is an array of arrays, represented by a table of rows and columns.
+
+![](./images/2d-arr.png)
+
+##### Initialization
+
+```c
+// more readable
+int arr[2][3] = {
+    {10, 11, 12},
+    {13, 14, 15}
+};
+```
+or 
+```c
+// [2], [3] known as first subscript and second subscript, respectively.
+int arr[2][3] = {10, 11, 12, 13, 14, 15};
+```
+
+Unlike a normal array, with 2D arrays we need to specify the size of the second diemnsion.
+
+```c
+int arr[2][3] = {10, 11, 12, 13, 14, 15}; // valid
+int arr[][3] = {10, 11, 12, 13, 14, 15}; // valid
+int arr[][] = {10, 11, 12, 13, 14, 15}; // Invalid
+int arr[2][] = {10, 11, 12, 13, 14, 15}; // Invalid
+```
+
+##### Example 
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[2][4]; // declaration
+    int i, j; // counter variables 
+    
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 3; j++){
+            
+            printf("Enter value for arr[%d][%d]: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    
+    printf("Two Dimensional array elements:\n");
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 3; j++){
+            printf("%d ", arr[i][j]);
+            
+            // for output readability 
+            if(j == 2){
+                printf("\n");
+            }
+        }
+    }
+}
+```
+
+##### Pointers & 2D arrays
+
+1D-array name works as a pointer to the base element of the array:
+```c
+int x[10];
+x[0] = 5;
+    
+printf("x = %p\n", x); // x = 0x7ffce444aab0
+printf("*x = %d\n", *x); // *x = 5
+```
+
+However, This isn't the case with 2D arrays.
+```c
+int y[2][3] = {10, 11, 12, 13, 14, 15};
+    
+printf("y[0] = %d\n", y[0]); // address of first element of first row
+printf("y[1] = %d\n", y[1]); // address of first element of second row
+```
+
