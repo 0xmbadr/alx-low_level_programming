@@ -169,8 +169,8 @@ However, This isn't the case with 2D arrays.
 ```c
 int y[2][3] = {10, 11, 12, 13, 14, 15};
     
-printf("y[0] = %d\n", y[0]); // address of first element of first row
-printf("y[1] = %d\n", y[1]); // address of first element of second row
+printf("y[0] = %p\n", y[0]); // address of first element of first row
+printf("y[1] = %p\n", y[1]); // address of first element of second row
 ```
 
 ## Tasks
