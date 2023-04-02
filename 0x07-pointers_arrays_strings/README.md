@@ -1,15 +1,17 @@
 <h1 align="center">0x07. C - Even more pointers, arrays and strings</h1>
 
-Table Of Contents
+## Table Of Contents
 - [Notes](#notes)
     - [Double Pointers](#double-pointers)
     - [2D Arrays In C](#2d-arrays)
+- [Tasks](#tasks)
+    - [0.memset](#0-memset)
 
 
-### Notes
+## Notes
 
 
-#### Double Pointers 
+### Double Pointers 
 
 > A **pointer to a pointer** or **A Double Pointer** is a pointer that holds the address of another pointer.
 
@@ -90,13 +92,13 @@ variable == *p1 == **p2
 
 
 
-#### 2D Arrays
+### 2D Arrays
 
 > A **2D Array** (aka **Matrix**) is an array of arrays, represented by a table of rows and columns.
 
 ![](./images/2d-arr.png)
 
-##### Initialization
+#### Initialization
 
 ```c
 // more readable
@@ -152,7 +154,7 @@ int main()
 }
 ```
 
-##### Pointers & 2D arrays
+#### Pointers & 2D arrays
 
 1D-array name works as a pointer to the base element of the array:
 ```c
@@ -170,4 +172,10 @@ int y[2][3] = {10, 11, 12, 13, 14, 15};
 printf("y[0] = %d\n", y[0]); // address of first element of first row
 printf("y[1] = %d\n", y[1]); // address of first element of second row
 ```
+
+## Tasks
+
+### 0. memset
+
+Write a function that fills memory with a constant byte. (similar to `memset` from the standad library).
 
