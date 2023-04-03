@@ -4,8 +4,10 @@
 - [Notes](#notes)
     - [Double Pointers](#double-pointers)
     - [2D Arrays In C](#2d-arrays)
+- [Quiz Notes](#quiz)
 - [Tasks](#tasks)
     - [0.memset](#0-memset)
+    - [1. memcpy](#1-memcpy)
 
 
 ## Notes
@@ -175,16 +177,22 @@ printf("y[1] = %p\n", y[1]); // address of first element of second row
 
 ## Quiz 
 
-1. Size of Pointers vs Size of `int`
+1. Size of `int` vs Size of Pointers vs Size of Double Pointers.
     ```c
-    int *p;
-    printf("%lu", sizeof(p)); // 8 byte
-    printf("\n%lu", sizeof(*p)); //4 byte 
+    printf("%lu", sizeof(int)); // 4 byte
+    printf("\n%lu", sizeof(int*)); // 8 byte
+    printf("\n%lu", sizeof(int**)); // 8 byte
     ```
 
 
 
 ## Tasks
+
+### How to run test? 
+```bash
+# example of 1-memcpy
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 ./tests/1-main.c 1-memcpy.c -o 1-memcpy
+```
 
 ### 0. memset
 
@@ -203,5 +211,25 @@ char* _memset(char *s, char b, unsigned int n)
 	}
 
 	return s;
+}
+```
+
+### 1. memcpy
+
+Write a function that copies memory area (similar to `memcpy` from the standard library).
+
+```c
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+    /* declare a zero or non-ngative integer */
+	unsigned int i;
+    /* Loop over until n reached */
+	for (i = 0; i < n; i++)
+	{
+    /* replace n bytes with of dest with src */
+		dest[i] = src[i];
+	}
+
+	return (dest);
 }
 ```
