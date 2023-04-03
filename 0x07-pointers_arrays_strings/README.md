@@ -252,3 +252,12 @@ char *_strchr(char *s, char c)
 	return ('\0');
 }
 ```
+
+### 3. strspn
+
+Write a function that gets the length of a prefix substring (similar to `strspn` from the standard library).
+
+```c
+
+```
+
